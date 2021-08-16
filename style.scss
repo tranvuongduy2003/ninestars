@@ -1,11 +1,13 @@
 $primary-color: #eb5d1e;
 $secondary-color: #fef8f5;
-$font-color: #4e4039;
+$brown: #4e4039;
+$gray: #5a6570;
+$light-brown: #7a6960;
 
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 62.5%;
-    color: $font-color;
+    color: $brown;
 }
 
 * {
@@ -14,7 +16,7 @@ html {
 
 a {
     text-decoration: none;
-    color: $font-color;
+    color: $brown;
 }
 
 body {
@@ -85,17 +87,19 @@ textarea {
     &__image img {
         width: 100%;
         object-fit: cover;
+        animation: move 2s infinite alternate;
     }
 
     &__title  {
         font-size: 4.8rem;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     &__desc {
         margin: 3rem 0;
         font-size: 2.4rem;
         font-weight: 300;
+        color: $gray;
     }
 
     &__button {
@@ -106,4 +110,70 @@ textarea {
         border-radius: 7rem;
         background-color: $primary-color;
     }
+}
+
+@keyframes move {
+    to {
+        transform: translateY(-1.5rem);
+    }
+}
+
+.about {
+    width: 100%;
+    padding: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.4;
+
+    &__image {
+        width: calc(40%);
+    }
+
+    &__content {
+        width: calc(50% - 1rem);
+    }
+
+    &__image img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 3.4rem;
+        font-weight: 600;
+    }
+
+    
+    &__desc {
+        font-size: 1.5rem;
+        color: $gray;
+    }
+
+    &__items {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: calc(50% - 1.5rem);
+    }
+    
+    &-item {
+        &__title {
+            margin-bottom: 1rem;    
+            font-size: 2rem;
+            font-weight: 600;
+            color:$light-brown;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 1rem;
+        font-size: 3.8rem;
+        color: rgba($primary-color, 0.6);
+    }
+
 }

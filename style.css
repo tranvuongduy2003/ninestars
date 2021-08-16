@@ -73,15 +73,17 @@ textarea {
 .hero__image img {
   width: 100%;
   object-fit: cover;
+  animation: move 2s infinite alternate;
 }
 .hero__title {
   font-size: 4.8rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .hero__desc {
   margin: 3rem 0;
   font-size: 2.4rem;
   font-weight: 300;
+  color: #5a6570;
 }
 .hero__button {
   display: inline-block;
@@ -90,6 +92,58 @@ textarea {
   color: white;
   border-radius: 7rem;
   background-color: #eb5d1e;
+}
+
+@keyframes move {
+  to {
+    transform: translateY(-1.5rem);
+  }
+}
+.about {
+  width: 100%;
+  padding: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.4;
+}
+.about__image {
+  width: calc(40%);
+}
+.about__content {
+  width: calc(50% - 1rem);
+}
+.about__image img {
+  width: 100%;
+  object-fit: cover;
+}
+.about__title {
+  margin-bottom: 1rem;
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+.about__desc {
+  font-size: 1.5rem;
+  color: #5a6570;
+}
+.about__items {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.about__item {
+  width: calc(50% - 1.5rem);
+}
+.about-item__title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7a6960;
+}
+.about__icon {
+  margin-bottom: 1rem;
+  font-size: 3.8rem;
+  color: rgba(235, 93, 30, 0.6);
 }
 
 /*# sourceMappingURL=style.css.map */
