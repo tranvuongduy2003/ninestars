@@ -39,6 +39,7 @@ textarea {
   justify-content: space-between;
   text-transform: capitalize;
   background-color: white;
+  z-index: 999;
 }
 .header__brand {
   font-size: 3rem;
