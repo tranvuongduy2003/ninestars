@@ -39,6 +39,7 @@ textarea {
   justify-content: space-between;
   text-transform: capitalize;
   background-color: white;
+  box-shadow: 0px 5px 10px 0px #eee;
   z-index: 999;
 }
 .header__brand {
@@ -48,6 +49,9 @@ textarea {
   font-size: 1.5rem;
   display: inline-block;
   padding: 1rem 0 1rem 3rem;
+}
+.header-nav__item:hover {
+  color: #eb5d1e;
 }
 .header-nav__button {
   padding: 1.5rem 2.5rem;
@@ -145,6 +149,201 @@ textarea {
   margin-bottom: 1rem;
   font-size: 3.8rem;
   color: rgba(235, 93, 30, 0.6);
+}
+
+.services {
+  padding: 5rem 7.2rem;
+  background-color: #fef8f5;
+}
+.services__header {
+  text-align: center;
+}
+.services__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #c2b7b1;
+  margin-bottom: 1rem;
+}
+.services__desc {
+  padding-bottom: 2rem;
+  margin-bottom: 4.3rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  position: relative;
+}
+.services__desc:before {
+  content: "";
+  width: 7rem;
+  height: 2px;
+  background-color: #eb5d1e;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.services__tags {
+  display: flex;
+  margin-left: -2.5rem;
+}
+.services__tag {
+  width: calc(25% - 2.5rem);
+  margin: 0 0 4rem 2.5rem;
+  padding: 3.5rem 3rem;
+  background-color: white;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0px 5px 15px 5px #eee;
+  border-bottom: 3px solid white;
+  transition: all 0.2s linear;
+}
+.services__tag:hover {
+  border-bottom: 3px solid #eb5d1e;
+  transform: translateY(-3px);
+}
+.services__icon {
+  margin-bottom: 2rem;
+  font-size: 3.4rem;
+  color: #eb5d1e;
+}
+.services__tag-name {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111;
+}
+.services__tag-content {
+  font-size: 1.5rem;
+  line-height: 1.9;
+}
+
+.portfolio {
+  margin: 5rem 7.2rem;
+}
+.portfolio__header {
+  text-align: center;
+}
+.portfolio__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #c2b7b1;
+  margin-bottom: 1rem;
+}
+.portfolio__desc {
+  padding-bottom: 2rem;
+  margin-bottom: 4.3rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  position: relative;
+}
+.portfolio__desc:before {
+  content: "";
+  width: 7rem;
+  height: 2px;
+  background-color: #eb5d1e;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.portfolio__filter {
+  display: flex;
+  justify-content: center;
+  margin-left: -3.3rem;
+  margin-bottom: 5rem;
+}
+.portfolio-filter__item a {
+  display: inline-block;
+  margin-left: 3.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111;
+}
+.portfolio-filter__item a:focus {
+  color: #eb5d1e;
+}
+.portfolio-filter__item a:hover {
+  color: #eb5d1e;
+}
+.portfolio__items {
+  height: 891px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -2.5rem;
+}
+.portfolio__item {
+  width: calc(100%/3 - 2.5rem);
+  height: calc(100%/3 - 3rem);
+  margin: 0 0 3rem 2.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio__item:hover .portfolio__wrap {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+}
+.portfolio__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio__wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(122, 105, 96, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+.portfolio__icons {
+  width: 100%;
+  height: 3.2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 1.5rem;
+  color: #eb5d1e;
+  background-color: white;
+  border-radius: 50%;
+}
+.portfolio__icon:first-child {
+  margin-right: 1.2rem;
+}
+.portfolio__icon:hover {
+  color: white;
+  background-color: #eb5d1e;
+}
+.portfolio__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.portfolio-item__name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.portfolio-item__category {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
