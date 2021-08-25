@@ -99,12 +99,14 @@ textarea {
     &__title  {
         font-size: 4.8rem;
         font-weight: 700;
+        line-height: 1.2;
     }
 
     &__desc {
         margin: 3rem 0;
         font-size: 2.4rem;
         font-weight: 300;
+        line-height: 1.4;
         color: $gray;
     }
 
@@ -119,8 +121,11 @@ textarea {
 }
 
 @keyframes move {
+    from {
+        transform: translateY(0.75rem);
+    }
     to {
-        transform: translateY(-1.5rem);
+        transform: translateY(-0.75rem);
     }
 }
 
@@ -344,7 +349,7 @@ textarea {
     &__wrap {
         position: absolute;
         top: 0;
-        right: 0;;
+        right: 0;
         width: 0;
         height: 100%;
         background-color: rgba($light-brown, 0.6);
@@ -402,6 +407,348 @@ textarea {
             font-size: 1.4rem;
             text-transform: uppercase;
             margin-bottom: 1rem;
+        }
+    }
+}
+
+.questions {
+    background-color: $secondary-color;
+    padding: 5rem 7.2rem;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $title-color;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        padding-bottom: 2rem;
+        margin-bottom: 4.3rem;;
+        font-size: 3.2rem;
+        font-weight: 700;
+        position: relative;
+        &:before {
+            content: "";
+            width: 7rem;
+            height: 2px;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__item {
+        padding: 2rem 0;
+        border-bottom: 1px solid #eae7e5;
+        color: #343a40;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.6rem;
+        &--up {
+            display: none;
+        }
+    }
+
+    &__question {
+        display: inline-block;
+        padding-left: 2.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #343a40;
+        position: relative;
+        cursor: pointer;
+        .active, &:hover {
+            color: $primary-color;
+        }
+
+    }
+
+    &__answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        padding-left: 2.5rem;
+        margin-top: 1.4rem;
+        font-size: 1.6rem;
+    }
+    
+}
+
+.team {
+    margin: 5rem 7.2rem;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $title-color;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        padding-bottom: 2rem;
+        margin-bottom: 4.3rem;;
+        font-size: 3.2rem;
+        font-weight: 700;
+        position: relative;
+        &:before {
+            content: "";
+            width: 7rem;
+            height: 2px;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__members {
+        height: 26rem;
+        display: flex;
+        margin-left: -2.5rem;
+    }
+
+    &__member {
+        width: calc(25% - 2.5rem);
+        margin-left: 2.5rem;
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        &:hover {
+            .team-member__socials {
+                width: 5rem;
+                opacity: 1;
+                visibility: visible;
+            }
+            .team-member__icon {
+                width: calc(100% - 3rem);
+                opacity: 1;
+                visibility: visible;
+            }
+            .team-member__info {
+                height: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+            .team-member__name,
+            .team-member__job {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &-member {
+        &__socials {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            background-color: rgba($brown, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s linear;
+        }
+
+        &__info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            padding-bottom: 3rem;
+            display: flex;
+            padding-left: 5rem;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;
+            text-transform: capitalize;
+            color: white;
+            background: linear-gradient(0deg, rgba(78,64,57,1) 0%, rgba(78,64,57,0) 100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s linear;
+        }
+
+        &__icon {
+            margin: 2rem 1.5rem 0 1.5rem;
+            width: 0;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.2s linear;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        &__name {
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+            z-index: 999;
+            transform: translateY(3rem);
+            transition: all 0.2s linear;
+        }
+
+        &__job {
+            font-size: 1.3rem;
+            font-style: italic;
+            z-index: 999;
+            transform: translateY(3rem);
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+.clients {
+    background-color: $secondary-color;
+    padding: 5rem 7.2rem;
+    position: relative;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $title-color;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        padding-bottom: 2rem;
+        margin-bottom: 4.3rem;;
+        font-size: 3.2rem;
+        font-weight: 700;
+        position: relative;
+        &:before {
+            content: "";
+            width: 7rem;
+            height: 2px;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__slider {
+        max-height: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: -12rem;
+        margin-bottom: 2.5rem;
+        overflow: hidden;
+    }
+
+    &__client {
+        width: calc((100%/6) - 12rem);
+        margin: 0 0 10rem 12rem;
+        opacity: 0.4;
+        &:hover {
+            opacity: 1;
+        }
+        img {
+            width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__input {
+        display: none;
+        &:checked + .clients__label {
+            background-color: $primary-color;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+    
+    &__label {
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px solid $primary-color;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+.contact {
+    padding: 5rem 7.2rem;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $title-color;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        padding-bottom: 2rem;
+        margin-bottom: 4.3rem;;
+        font-size: 3.2rem;
+        font-weight: 700;
+        position: relative;
+        &:before {
+            content: "";
+            width: 7rem;
+            height: 2px;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
