@@ -481,14 +481,169 @@
             <h2 class="contact__title">Contact us</h2>
             <p class="contact__desc">Contact us the get started</p>
         </div>
-        <div class="contact__info">
-
+        <div class="contact__address">
+            <div class="contact-address__info">
+                <i class="fas fa-map-marker-alt contact-address__icon"></i>
+                <h4 class="contact-address__title">Location:</h4>
+                <p class="contact-address__content">A108 Adam Street, New York, NY 535022</p>
+            </div>
+            <div class="contact-address__info">
+                <i class="far fa-envelope contact-address__icon"></i>
+                <h4 class="contact-address__title">Email:</h4>
+                <p class="contact-address__content">info@example.com</p>
+            </div>
+            <div class="contact-address__info">
+                <i class="fas fa-mobile-alt contact-address__icon"></i>
+                <h4 class="contact-address__title">Call:</h4>
+                <p class="contact-address__content">+84 123 456 789</p>
+            </div>
+            <div class="contact-address__map" id="map"></div>
         </div>
-        <div class="contact__message">
-
+        <div class="contact__form">
+            <form autocomplete="off">
+                <div class="contact__name">
+                    <label for="name" class="contact__label">Your name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="contact__email">
+                    <label for="email" class="contact__label">Your email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="contact__subject">
+                    <label for="subject" class="contact__label">Subject</label>
+                    <input type="text" id="subject">
+                </div>
+                <div class="contact__message">
+                    <label for="name" class="contact__label">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button type="submit">Send message</button>
+            </form>
         </div>
     </section>
 
+    <section class="join">
+        <div class="join__header">
+            <h2 class="join__title">Join Our Newsletter
+            </h2>
+            <p class="join__desc">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+        </div>
+
+        <div class="join__subcribe">
+            <form autocomplete="off" class="join__form">
+                <input type="text" id="text">
+                <div class="join__button">
+                    <button type="submit">Subcribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__info">
+            <h3 class="footer__brand">Ninestars</h3>
+            <p class="footer__contact">
+                A108 Adam Street 
+                <br>
+                New York, NY 535022
+                <br>
+                United States
+                <br>
+                <br>
+                <strong>Phone:</strong>
+                 +84 123 456 789
+                <br>
+                <strong>Email:</strong>
+                 info@example.com
+                <br>
+            </p>
+        </div>
+        <div class="footer__links">
+            <h4 class="footer__title">
+                Useful Links
+            </h4>
+            <ul class="footer__list">
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Home</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">About us</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Services</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Term of service</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Pricacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__services">
+            <h4 class="footer__title">
+                Our Services
+            </h4>
+            <ul class="footer__list">
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Web Design</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Web Development</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Product Management</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Marketing</a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="footer__item">Graphic Design</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__socials">
+            <h4 class="footer__title">
+                Our Social Networks
+            </h4>
+            <div class="footer__desc">
+                Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies
+            </div>
+            <ul class="footer__social-networks">
+                <li>
+                    <i class="fab fa-twitter footer__icon"></i>
+                </li>
+                <li>
+                    <i class="fab fa-facebook-f footer__icon"></i>
+                </li>
+                <li>
+                    <i class="fab fa-instagram footer__icon"></i>
+                </li>
+                <li>
+                    <i class="fab fa-skype footer__icon"></i>
+                </li>
+                <li>
+                    <i class="fab fa-linkedin-in footer__icon"></i>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </body>
 </html>
